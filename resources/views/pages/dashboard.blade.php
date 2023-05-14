@@ -95,6 +95,9 @@
     </div> <!-- /.col -->
   </div> <!-- .row -->
 </div> <!-- .container-fluid -->
+{{-- @endsection
+@section('script') --}}
+    
 <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/moment.min.js"></script>
