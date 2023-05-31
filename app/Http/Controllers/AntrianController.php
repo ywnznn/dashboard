@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Antrian;
+use App\Models\Keluhan;
+use App\Models\Konsultasi;
 use Illuminate\Http\Request;
 
 class AntrianController extends Controller
@@ -14,10 +16,13 @@ class AntrianController extends Controller
             ->where('id_role', '2')
             ->get();
 
-        $antrian = Antrian::with('user')->get();
+        $datakeluhan = Keluhan::all();
+
+        $antrian = Antrian::with('user', 'keluhan')->get();
         return view('admin.pages.antrian', [
             'antrian' => $antrian,
             'datauser' => $datauser,
+            'datakeluhan' => $datakeluhan,
         ]);
 
     }
@@ -27,10 +32,14 @@ class AntrianController extends Controller
         $request->validate(
             [
                 'id_user' => 'required',
+                'id_keluhan' => 'required',
+                'detail_keluhan' => 'required',
                 'tanggal' => 'required',
             ],
             [
                 'id_user.required' => 'ID User harus diisi',
+                'id_keluhan.required' => 'ID Keluhan harus diisi',
+                'detail_keluhan.required' => 'Detail Keluhan harus diisi',
                 'tanggal.required' => 'Tanggal harus diisi',
             ],
         );
@@ -45,6 +54,8 @@ class AntrianController extends Controller
 
         Antrian::create([
             'id_user' => $request->id_user,
+            'id_keluhan' => $request->id_keluhan,
+            'detail_keluhan' => $request->detail_keluhan,
             'tanggal' => $request->tanggal,
             'no_antrian' => $noantrian,
             'status' => 'Belum Selesai',
@@ -59,16 +70,22 @@ class AntrianController extends Controller
 
         $request->validate(
             [
+                'id_keluhan' => 'required',
+                'detail_keluhan' => 'required',
                 'status' => 'required',
             ],
             [
 
+                'id_keluhan.required' => 'ID Keluhan harus diisi',
+                'detail_keluhan.required' => 'Detail Keluhan harus diisi',
                 'status.required' => 'Status harus diisi',
             ],
         );
 
         $antrian = Antrian::find($id);
         $antrian->update([
+            'id_keluhan' => $request->id_keluhan,
+            'detail_keluhan' => $request->detail_keluhan,
             'status' => $request->status,
         ]);
 
@@ -79,9 +96,14 @@ class AntrianController extends Controller
 
     public function destroy($id)
     {
-        $antrian = Antrian::find($id);
-        $antrian->delete();
+        $cekidnoantrian = Konsultasi::where('id_antrian', $id)->first();
+        if ($cekidnoantrian) {
+            return redirect()->back()->with('gagal', 'Gagal menghapus antrian, karena antrian sudah digunakan');
+        } else {
+            $antrian = Antrian::find($id);
+            $antrian->delete();
 
-        return redirect()->back()->with('delete', 'Berhasil menghapus antrian');
+            return redirect()->back()->with('delete', 'Berhasil menghapus antrian');
+        }
     }
 }
