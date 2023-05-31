@@ -16,7 +16,7 @@
                             <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
                                 <div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
                                     <span class="ltext-101 cl2 respon2">
-                                        Skincare Murah
+                                        Women Collection 2018
                                     </span>
                                 </div>
 
@@ -27,7 +27,7 @@
                                 </div>
 
                                 <div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-                                    <a href="/"
+                                    <a href="product.html"
                                         class="flex-c-m stext-101 cl0 size-101 bg10 bor1 hov-btn4 p-lr-15 trans-04">
                                         Shop Now
                                     </a>
@@ -41,14 +41,14 @@
                             <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
                                 <div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
                                     <span class="ltext-101 cl2 respon2">
-                                        Skincare Murah
+                                        Men New-Season
                                     </span>
                                 </div>
 
                                 <div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn"
                                     data-delay="800">
                                     <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
-                                        Melody Beauty
+                                        Jackets & Coats
                                     </h2>
                                 </div>
 
@@ -68,7 +68,7 @@
                                 <div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft"
                                     data-delay="0">
                                     <span class="ltext-101 cl2 respon2">
-                                        Skincare Murah
+                                        Men Collection 2018
                                     </span>
                                 </div>
 
