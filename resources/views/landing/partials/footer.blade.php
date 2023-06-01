@@ -119,8 +119,8 @@
                 <script>
                     document.write(new Date().getFullYear());
                 </script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i>
-                by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp;
-                distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                by <a href="https://www.instagram.com/int_class21/" target="_blank">MIF INT CLASS</a> 
+                To <a href="https://www.instagram.com/melodybeauty29/" target="_blank">Melody Beauty</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
             </p>

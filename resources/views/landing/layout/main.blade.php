@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>@yield('title') - Coza Store</title>
+    <title>@yield('title') - Melody Beauty</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
