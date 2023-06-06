@@ -62,7 +62,7 @@ class ProductController extends Controller
             [
                 'name' => 'required',
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                'harga' => 'required',
+                'harga' => 'required|max:12|min:4|numeric',
                 'deskripsi' => 'required',
                 'jumlah_terjual' => 'required',
                 'id_kategori' => 'required',
@@ -106,7 +106,7 @@ class ProductController extends Controller
                 [
                     'name' => 'required',
                     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                    'harga' => 'required',
+                    'harga' => 'required|max:12|min:4|numeric',
                     'deskripsi' => 'required',
                     'jumlah_terjual' => 'required',
                     'id_kategori' => 'required',
@@ -147,7 +147,7 @@ class ProductController extends Controller
             $request->validate(
                 [
                     'name' => 'required',
-                    'harga' => 'required',
+                    'harga' => 'required|max:12|min:4|numeric',
                     'jumlah_terjual' => 'required',
                     'deskripsi' => 'required',
                     'id_kategori' => 'required',

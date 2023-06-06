@@ -46,7 +46,7 @@ class AntrianController extends Controller
 
         $cekantrian = Antrian::where('id_user', $request->id_user)->where('tanggal', $request->tanggal)->first();
         if ($cekantrian) {
-            return redirect()->back()->with('sudah ada', 'Anda sudah mendaftar antrian pada tanggal tersebut');
+            return redirect()->back()->with('sudahada', 'Anda sudah mendaftar antrian pada tanggal tersebut');
         }
 
         $noantrian = Antrian::where('tanggal', $request->tanggal)->count();

@@ -121,13 +121,6 @@ class DatabaseSeeder extends Seeder
             'id_kulit' => null,
             'id_role' => 1,
         ]);
-        User::create([
-            'name' => 'hai',
-            'email' => 'hai@gmail.com',
-            'password' => bcrypt('hai'),
-            'id_kulit' => null,
-            'id_role' => 1,
-        ]);
 
         Kategori::create([
             'name' => 'Skincare',
