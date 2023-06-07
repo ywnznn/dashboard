@@ -100,7 +100,7 @@
                                                                 <div class="col-sm-10">
                                                                     <input type="text" name="name"
                                                                         value="{{ $data->antrian->keluhan->name }}"
-                                                                        class="form-control" placeholder="Masukkan Nama">
+                                                                        class="form-control" placeholder="Masukkan Nama" disabled>
                                                                 </div>
                                                             </div>
 
@@ -109,14 +109,14 @@
                                                                 <label class="col-sm-2 col-form-label">Detail
                                                                     Keluhan</label>
                                                                 <div class="col-sm-10">
-                                                                    <textarea class="form-control" cols="30" rows="5">{{ $data->antrian->detail_keluhan }}</textarea>
+                                                                    <textarea class="form-control" cols="30" rows="5" disabled>{{ $data->antrian->detail_keluhan }}</textarea>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group row">
                                                                 <label class="col-sm-2 col-form-label">Hasil
                                                                     Konsultasi</label>
                                                                 <div class="col-sm-10">
-                                                                    <textarea class="form-control" cols="30" rows="5">{{ $data->hasil_konsultasi }}</textarea>
+                                                                    <textarea class="form-control" cols="30" rows="5" disabled>{{ $data->hasil_konsultasi }}</textarea>
                                                                 </div>
                                                             </div>
 
